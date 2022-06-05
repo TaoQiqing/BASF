@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" 
+           xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="basf">
+            <EntityType Name="chats">
+                <Key>
+                    <PropertyRef Name="phone"/>
+                </Key>
+                <Property Name="phone" Nullable="false" Type="Edm.String"/>
+                <Property Name="contactName" Nullable="false" Type="Edm.String"/>
+                <Property Name="photo" Nullable="false" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="ReceivedMessages">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Nullable="false" Type="Edm.String"/>
+                <Property Name="date" Nullable="false" Type="Edm.String"/>
+                <Property Name="text" Nullable="false" Type="Edm.String"/>
+                <Property Name="phone" Nullable="false" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="SentMessages">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Nullable="false" Type="Edm.String"/>
+                <Property Name="text" Nullable="false" Type="Edm.String"/>
+                <Property Name="phone" Nullable="false" Type="Edm.String"/>
+                <Property Name="date" Nullable="false" Type="Edm.String"/>
+                <Property Name="sent" Nullable="false" Type="Edm.Boolean"/>
+                <Property Name="delivered" Nullable="false" Type="Edm.Boolean"/>
+                <Property Name="read" Nullable="false" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityContainer Name="default" m:IsDefaultEntityContainer="true">
+                <EntitySet EntityType="basf.chats" Name="chatsSet"/>
+                <EntitySet EntityType="basf.ReceivedMessages" Name="ReceivedMessagesSet"/>
+                <EntitySet EntityType="basf.SentMessages" Name="SentMessagesSet"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

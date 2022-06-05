@@ -1,0 +1,13 @@
+<mvc:View controllerName=""
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <SearchField search=".onFilterInvoices"/>
+    <List items="{chatsSet>/}" id="list" mode="SingleSelect">
+        <!--  <List id="list" mode="Delete" delete="handleDelete" enableBusyIndicator="true" items="{editModel>/employee}">  -->
+        <items>
+            <ObjectListItem title="{objectModel>Name}" number="{objectModel>Department}" numberState="{= ${objectModel>Department} === 'Sales' ? 'Error': 'Success'}">
+                <ObjectAttribute text="Type of Leave: {objectModel>TypeLeave}"/>
+            </ObjectListItem>
+        </items>
+    </List>
+</mvc:View>

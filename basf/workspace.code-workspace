@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\master-detail\\master-detail-sapui5-fiori"
+		},
+		{
+			"name": "basf",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

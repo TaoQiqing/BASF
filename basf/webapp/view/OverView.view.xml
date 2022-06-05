@@ -1,0 +1,34 @@
+<mvc:View controllerName="basf.basf.controller.OverView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Image src="../LocalService/image/logo-min.png"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title text="{i18n>homePageTitle}"/>
+                </contentMiddle>
+                <contentRight>
+                    <Label text="Version 1.0"/>
+                       
+                    
+                        
+
+                    <Button icon="sap-icon://sys-help-2"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <SplitApp id="SplitApp" initialDetail="detail" initialMaster="master">
+                <masterPages>
+                    <mvc:XMLView viewName="basf.basf.view.Master"/>
+                </masterPages>
+                <detailPages>
+                    <mvc:XMLView viewName="basf.basf.view.Detail"/>
+                </detailPages>
+            </SplitApp>
+        </content>
+    </Page>
+</mvc:View>
